@@ -1,0 +1,9 @@
+# Ignore all "bin" directories at any depth
+bin/
+**/bin/
+**/bin/**
+
+# Ignore Python bytecode cache directories and compiled files
+__pycache__/
+**/__pycache__/
+*.py[cod]
