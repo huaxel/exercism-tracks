@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/juanbenjumea/coding/exercises/exercism/csharp/hello-world/HelloWorld.csproj": {}
+    "/Users/juanbenjumea/coding/exercises/exercism/csharp/bird-watcher/BirdWatcher.csproj": {}
   },
   "projects": {
-    "/Users/juanbenjumea/coding/exercises/exercism/csharp/hello-world/HelloWorld.csproj": {
+    "/Users/juanbenjumea/coding/exercises/exercism/csharp/bird-watcher/BirdWatcher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/juanbenjumea/coding/exercises/exercism/csharp/hello-world/HelloWorld.csproj",
-        "projectName": "HelloWorld",
-        "projectPath": "/Users/juanbenjumea/coding/exercises/exercism/csharp/hello-world/HelloWorld.csproj",
+        "projectUniqueName": "/Users/juanbenjumea/coding/exercises/exercism/csharp/bird-watcher/BirdWatcher.csproj",
+        "projectName": "BirdWatcher",
+        "projectPath": "/Users/juanbenjumea/coding/exercises/exercism/csharp/bird-watcher/BirdWatcher.csproj",
         "packagesPath": "/Users/juanbenjumea/.nuget/packages/",
-        "outputPath": "/Users/juanbenjumea/coding/exercises/exercism/csharp/hello-world/obj/",
+        "outputPath": "/Users/juanbenjumea/coding/exercises/exercism/csharp/bird-watcher/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/juanbenjumea/.nuget/NuGet/NuGet.Config"

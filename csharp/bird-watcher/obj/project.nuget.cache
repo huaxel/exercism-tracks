@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LI5qMaBdU54=",
+  "dgSpecHash": "3Fio24dncVY=",
   "success": true,
-  "projectFilePath": "/Users/juanbenjumea/coding/exercises/exercism/csharp/hello-world/HelloWorld.csproj",
+  "projectFilePath": "/Users/juanbenjumea/coding/exercises/exercism/csharp/bird-watcher/BirdWatcher.csproj",
   "expectedPackageFiles": [
     "/Users/juanbenjumea/.nuget/packages/exercism.tests.xunit.v3/0.1.0-beta1/exercism.tests.xunit.v3.0.1.0-beta1.nupkg.sha512",
     "/Users/juanbenjumea/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
