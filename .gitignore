@@ -13,3 +13,7 @@ __pycache__/
 **/__pycache__/
 *.py[cod]
 .fake
+
+# Ignore Visual Studio Code settings directory
+.vscode/
+./exercism
