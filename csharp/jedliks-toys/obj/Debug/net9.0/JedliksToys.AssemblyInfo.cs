@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JedliksToys")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c49b1cc319a90027e14ae8ad33aead2345089a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07c0d76a8eb0c9603097573271fa0af63fd88a36")]
 [assembly: System.Reflection.AssemblyProductAttribute("JedliksToys")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JedliksToys")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
