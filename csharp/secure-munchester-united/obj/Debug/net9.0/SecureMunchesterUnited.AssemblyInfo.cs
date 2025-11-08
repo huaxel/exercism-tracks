@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecureMunchesterUnited")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07c0d76a8eb0c9603097573271fa0af63fd88a36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5704cd6fd40b3a387bbc392b85e1539e522af41")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecureMunchesterUnited")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecureMunchesterUnited")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
