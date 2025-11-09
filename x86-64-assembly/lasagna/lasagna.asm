@@ -16,22 +16,19 @@ expected_minutes_in_oven:
 
 global remaining_minutes_in_oven
 remaining_minutes_in_oven:
-    ; arg: rdi = actual_minutes_in_oven
-    mov rax, 40         ; expected minutes
+    call expected_minutes_in_oven
     sub rax, rdi        ; remaining = expected - actual
     ret
 
 global preparation_time_in_minutes
 preparation_time_in_minutes:
-    ; arg: rdi = number_of_layers
     mov rax, rdi
     shl rax, 1          ; multiply by 2 (2 minutes per layer)
     ret
 
 global elapsed_time_in_minutes
 elapsed_time_in_minutes:
-    ; args: rdi = number_of_layers, rsi = actual_minutes_in_oven
-    mov rax, rdi
+    call preparation_time_in_minutes
     add rax, rsi        ; elapsed = prep_time + actual_minutes
     ret
     
