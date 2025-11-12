@@ -8,7 +8,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Detects_two_anagrams()
     {
         string[] candidates = ["lemons", "cherry", "melons"];
@@ -17,7 +17,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Does_not_detect_anagram_subsets()
     {
         string[] candidates = ["dog", "goody"];
@@ -25,7 +25,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Detects_anagram()
     {
         string[] candidates = ["enlists", "google", "inlets", "banana"];
@@ -34,7 +34,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Detects_three_anagrams()
     {
         string[] candidates = ["gallery", "ballerina", "regally", "clergy", "largely", "leading"];
@@ -43,7 +43,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Detects_multiple_anagrams_with_different_case()
     {
         string[] candidates = ["Eons", "ONES"];
@@ -52,7 +52,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Does_not_detect_non_anagrams_with_identical_checksum()
     {
         string[] candidates = ["last"];
@@ -60,7 +60,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Detects_anagrams_case_insensitively()
     {
         string[] candidates = ["cashregister", "Carthorse", "radishes"];
@@ -69,7 +69,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Detects_anagrams_using_case_insensitive_subject()
     {
         string[] candidates = ["cashregister", "carthorse", "radishes"];
@@ -78,7 +78,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Detects_anagrams_using_case_insensitive_possible_matches()
     {
         string[] candidates = ["cashregister", "Carthorse", "radishes"];
@@ -87,7 +87,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Does_not_detect_an_anagram_if_the_original_word_is_repeated()
     {
         string[] candidates = ["goGoGO"];
@@ -95,7 +95,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Anagrams_must_use_all_letters_exactly_once()
     {
         string[] candidates = ["patter"];
@@ -103,7 +103,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Words_are_not_anagrams_of_themselves()
     {
         string[] candidates = ["BANANA"];
@@ -111,7 +111,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Words_are_not_anagrams_of_themselves_even_if_letter_case_is_partially_different()
     {
         string[] candidates = ["Banana"];
@@ -119,7 +119,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Words_are_not_anagrams_of_themselves_even_if_letter_case_is_completely_different()
     {
         string[] candidates = ["banana"];
@@ -127,7 +127,7 @@ public class AnagramTests
         Assert.Empty(sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Words_other_than_themselves_can_be_anagrams()
     {
         string[] candidates = ["LISTEN", "Silent"];
@@ -136,7 +136,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Handles_case_of_greek_letters()
     {
         string[] candidates = ["ΒΓΑ", "ΒΓΔ", "γβα", "αβγ"];
@@ -145,7 +145,7 @@ public class AnagramTests
         Assert.Equal(expected, sut.FindAnagrams(candidates));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Different_characters_may_have_the_same_bytes()
     {
         string[] candidates = ["€a"];
