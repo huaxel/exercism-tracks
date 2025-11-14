@@ -1,20 +1,16 @@
 # Ignore all "bin" directories at any depth
 bin/
-**/bin/
-**/bin/**
 
 # Ignore all "obj" directories at any depth
 obj/
-**/obj/
-**/obj/**
 
-## ignore assembly output directories
+# Ignore all out directories (recursively)
 out/
-**/out/
-**/out/**
-**/**.AssemblyInfo.cs
-**/**.AssemblyInfoInputs.cache
-**/**.assets.cache
+
+# Ignore MSBuild/C# auto-generated files everywhere
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.assets.cache
 
 # Ignore Python bytecode cache directories and compiled files
 __pycache__/
