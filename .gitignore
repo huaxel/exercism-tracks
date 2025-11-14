@@ -8,6 +8,13 @@ obj/
 **/obj/
 **/obj/**
 
+## ignore assembly output directories
+out/
+**/out/
+**/out/**
+**.AssemblyInfo.cs
+**.AssemblyInfoInput.cs
+
 # Ignore Python bytecode cache directories and compiled files
 __pycache__/
 **/__pycache__/
