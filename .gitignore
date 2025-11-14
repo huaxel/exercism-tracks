@@ -12,8 +12,9 @@ obj/
 out/
 **/out/
 **/out/**
-**.AssemblyInfo.cs
-**.AssemblyInfoInput.cs
+**/**.AssemblyInfo.cs
+**/**.AssemblyInfoInputs.cache
+**/**.assets.cache
 
 # Ignore Python bytecode cache directories and compiled files
 __pycache__/
