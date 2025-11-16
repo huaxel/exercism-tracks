@@ -1,8 +1,10 @@
 # Ignore all "bin" directories at any depth
 bin/
+**/bin/
 
 # Ignore all "obj" directories at any depth
 obj/
+**/obj/
 
 # Ignore all out directories (recursively)
 out/
