@@ -2,6 +2,9 @@ public static class ReverseString
 {
     public static string Reverse(string input)
     {
-        throw new NotImplementedException("You need to implement this method.");
+        if (input == null) return string.Empty;
+        char[] charArray = input.ToCharArray();
+        System.Array.Reverse(charArray);
+        return new string(charArray);
     }
 }
