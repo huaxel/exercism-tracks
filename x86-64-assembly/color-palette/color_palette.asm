@@ -5,7 +5,7 @@
 
 
 section .rodata
-    global RED 
+    global RED
     global GREEN
     global BLUE
 
@@ -63,7 +63,7 @@ make_color_combination:
     pop rdi
 
     mov [rdi], eax
-    
+
     ret
 
 %ifidn __OUTPUT_FORMAT__,elf64
