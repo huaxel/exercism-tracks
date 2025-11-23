@@ -13,7 +13,7 @@ static class LogLine
 {
     public static LogLevel ParseLogLevel(string logLine)
     {
-        return logline[1..4] switch
+        return logLine[1..4] switch
         {
             "TRC" => LogLevel.Trace,
             "DBG" => LogLevel.Debug,
@@ -26,6 +26,5 @@ static class LogLine
     }
 
     public static string OutputForShortLog(LogLevel logLevel, string message)
-    {
-        return $"{(int)logLevel}: {message}";
+    => $"{(int)logLevel}:{message}";
 }
