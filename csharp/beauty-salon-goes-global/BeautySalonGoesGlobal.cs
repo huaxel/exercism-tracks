@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Globalization;
 
+
 public enum Location
 {
     NewYork,
@@ -17,25 +18,29 @@ public enum AlertLevel
 
 public static class Appointment
 {
-    public static DateTime ShowLocalTime(DateTime dtUtc)
+    private static readonly bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
+    public static DateTime ShowLocalTime(DateTime dtUtc) => dtUtc.ToLocalTime();
+
+    public static TimeZoneInfo GetTimeZoneInfo(Location location)
     {
-        return dtUtc.ToLocalTime();
+        return location switch
+        {
+            Location.NewYork => TimeZoneInfo.FindSystemTimeZoneById(isWindows ? "Eastern Standard Time" : "America/New_York"),
+            Location.London => TimeZoneInfo.FindSystemTimeZoneById(isWindows ? "GMT Standard Time" : "Europe/London"),
+            Location.Paris => TimeZoneInfo.FindSystemTimeZoneById(isWindows ? "W. Europe Standard Time" : "Europe/Paris"),
+            _ => throw new ArgumentOutOfRangeException(nameof(location), "Invalid location")
+        };
     }
 
     public static DateTime Schedule(string appointmentDateDescription, Location location)
     {
-        string OS = RuntimeInformation.OSDescription.ToLower();
-        TimeZoneInfo timezone = location switch
-        {
-            Location.NewYork => TimeZoneInfo.FindSystemTimeZoneById(OS.Contains("windows") ? "Eastern Standard Time" : "America/New_York"),
-            Location.London => TimeZoneInfo.FindSystemTimeZoneById(OS.Contains("windows") ? "GMT Standard Time" : "Europe/London"),
-            Location.Paris => TimeZoneInfo.FindSystemTimeZoneById(OS.Contains("windows") ? "W. Europe Standard Time" : "Europe/Paris"),
-            _ => throw new ArgumentOutOfRangeException(nameof(location), "Invalid location")
-        };
-
         DateTime localTime = DateTime.Parse(appointmentDateDescription);
+        TimeZoneInfo timezone = GetTimeZoneInfo(location);
+
         return TimeZoneInfo.ConvertTimeToUtc(localTime, timezone);
     }
+
     public static DateTime GetAlertTime(DateTime appointment, AlertLevel alertLevel)
     {
         return alertLevel switch
@@ -49,18 +54,10 @@ public static class Appointment
 
     public static bool HasDaylightSavingChanged(DateTime dt, Location location)
     {
-        string OS = RuntimeInformation.OSDescription.ToLower();
-        TimeZoneInfo timezone = location switch
-        {
-            Location.NewYork => TimeZoneInfo.FindSystemTimeZoneById(OS.Contains("windows") ? "Eastern Standard Time" : "America/New_York"),
-            Location.London => TimeZoneInfo.FindSystemTimeZoneById(OS.Contains("windows") ? "GMT Standard Time" : "Europe/London"),
-            Location.Paris => TimeZoneInfo.FindSystemTimeZoneById(OS.Contains("windows") ? "W. Europe Standard Time" : "Europe/Paris"),
-            _ => throw new ArgumentOutOfRangeException(nameof(location), "Invalid location")
-        };
+        TimeZoneInfo timezone = GetTimeZoneInfo(location);
         DateTime lastWeek = dt.AddDays(-7);
 
         return timezone.IsDaylightSavingTime(dt) != timezone.IsDaylightSavingTime(lastWeek);
-
     }
 
     public static DateTime NormalizeDateTime(string dtStr, Location location)
@@ -72,8 +69,9 @@ public static class Appointment
             Location.Paris => new CultureInfo("fr-FR"),
             _ => throw new ArgumentOutOfRangeException(nameof(location), "Invalid location")
         };
-        try {
-           return DateTime.Parse(dtStr, culture);
+        try
+        {
+            return DateTime.Parse(dtStr, culture);
         }
         catch (FormatException)
         {
