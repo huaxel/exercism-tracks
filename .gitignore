@@ -1,9 +1,25 @@
 # Ignore all "bin" directories at any depth
 bin/
 **/bin/
-**/bin/**
+
+# Ignore all "obj" directories at any depth
+obj/
+**/obj/
+
+# Ignore all out directories (recursively)
+out/
+
+# Ignore MSBuild/C# auto-generated files everywhere
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.assets.cache
 
 # Ignore Python bytecode cache directories and compiled files
 __pycache__/
 **/__pycache__/
 *.py[cod]
+.fake
+
+# Ignore Visual Studio Code settings directory
+.vscode/
+./exercism
