@@ -2,7 +2,8 @@ static class LogLine
 {
     public static string Message(string logLine)
     {
-        throw new NotImplementedException("Please implement the (static) LogLine.Message() method");
+        logLine = logLine[(logLine.IndexOf(']') + 2)..];
+        return logLine.Trim();
     }
 
     public static string LogLevel(string logLine)
